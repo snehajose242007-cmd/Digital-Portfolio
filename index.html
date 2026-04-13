@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Portfolio Auth System</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- ================= AUTH ================= -->
+<div id="authPage" class="center">
+  <div class="box">
+    <h2 id="authTitle">Login</h2>
+
+    <input type="email" id="email" placeholder="Email" />
+    
+    <input type="password" id="password" placeholder="Password" />
+
+    <p class="small" onclick="togglePass()">Show/Hide Password</p>
+
+    <button onclick="auth()">Submit</button>
+
+    <p class="small" onclick="switchMode()">
+      Switch to <span id="modeText">Signup</span>
+    </p>
+
+    <p id="msg"></p>
+  </div>
+</div>
+
+<!-- ================= PORTFOLIO ================= -->
+<div id="app" class="hidden">
+
+  <nav>
+    <div><b>My Portfolio</b></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a onclick="logout()">Logout</a>
+      <button onclick="toggleTheme()">🌓</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="section hero">
+    <h1>Hello, I'm <span class="accent">Sneha Jose</span></h1>
+    <p>Engineering Student | Editor | UI/UX Enthusiast</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <div class="card">
+      I am Sneha Jose, a passionate and motivated B.Tech Computer Science Engineering student. I am currently pursuing my undergraduate degree while actively building my skills in web development, programming, and modern software technologies.
+<br>
+I am also a proud Reliance Foundation Undergraduate Scholar, which has supported and encouraged my academic journey and personal growth.Outside academics, I am interested in design, problem-solving, and exploring new technologies that enhance user experience and digital creativity.
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Python</div>
+	<div class="card">Singer</div>
+	<div class="card">Leadership Skills</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">Portfolio Website</div>
+      <div class="card">Login System</div>
+	<div class="card">
+  Market Nest Website<br>
+  <a href="https://stevejs-droid.github.io/marketnest/" target="_blank">View Project</a>
+</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+  <h2>Contact</h2>
+
+  <div class="card">
+    <p>Email: snehajose242007@gmail.com</p>
+
+    <p>
+      GitHub:
+      <a href="https://github.com/snehajose242007-cmd" target="_blank">
+        github.com/snehajose
+      </a>
+    </p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/sneha-jose-497051389?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+        linkedin.com/in/sneha-jose
+      </a>
+    </p>
+  </div>
+<div class="card" style="background: rgba(255,255,255,0.08); padding:20px; border-radius:12px; backdrop-filter: blur(10px);">
+
+  <h3 style="margin-bottom:10px;">💬 Leave a Message</h3>
+
+  <form onsubmit="sendMessage(event)">
+
+    <input type="text"
+      id="name"
+      placeholder="Your Name"
+      required
+      style="width:100%; padding:10px; margin:8px 0; border:none; border-radius:8px;">
+
+    <input type="email"
+      id="contactEmail"
+      placeholder="Your Email"
+      required
+      style="width:100%; padding:10px; margin:8px 0; border:none; border-radius:8px;">
+
+    <textarea id="message"
+      placeholder="Your Message"
+      required
+      style="width:100%; padding:10px; margin:8px 0; border:none; border-radius:8px; min-height:100px;"></textarea>
+
+    <button type="submit"
+      style="width:100%; padding:10px; border:none; border-radius:8px; background:#60a5fa; color:white; cursor:pointer;">
+      Send Message
+    </button>
+
+    <p id="contactMsg" style="margin-top:10px;"></p>
+
+  </form>
+</div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
